@@ -1,14 +1,15 @@
-
-
+import Navbar from "./components/Navbar/Navbar"
+import Home from "./components/Home/Home"
 const App = () => {
 
   return (
-    <>
       <div>
-        <h1>Autos</h1>
+        <Navbar/>
+        <Home/>
       </div>
-    </>
   )
 }
 
 export default App
+
+
