@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom"
 import NavLogo from "./NavLogo"
 import NavLinks from "./NavLinks"
 import NavUtility from "./NavUtility"
-import Content from "../content"
 
 const Navbar = () => {
 
@@ -31,8 +30,9 @@ const Navbar = () => {
     return(
         <>
         <div className={
-            `transition-all duration-300 ease-in-out shadow-none flex items-center justify-between w-screen h-16 py-5 px-5 
-            ${isMenuOpen || isScrolled ? "bg-black sticky top-0 z-50" : ""}
+            `absolute top-0 transition-all duration-300 ease-in-out shadow-none flex items-center
+            justify-between w-screen h-16 py-5 px-5 
+            ${isMenuOpen || isScrolled ? "bg-black fixed top-0 z-50" : ""}
              ${isMenuOpen ? "text-white" : isScrolled ? "shadow-lg text-white" : ""}`}>
             <NavLogo/>
             <NavLinks currentPath = {currentPath} />
@@ -43,8 +43,6 @@ const Navbar = () => {
         <div className="lg:hidden">
                 <NavLinks currentPath = {currentPath} isMenuOpen={isMenuOpen} />
         </div>
-
-               <Content/>
 
         </div>
 

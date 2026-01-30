@@ -9,7 +9,7 @@ interface LogoType {
 const NavLogo = () => {
 
     const logo : LogoType = {
-        image : "Autos",
+        image : "AUTOHIRE",
         href : "/home",
     }
 

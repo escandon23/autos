@@ -25,12 +25,11 @@ const NavLinks : React.FC<NavLinksProp>  = ({currentPath , isMenuOpen}) => {
             <div className={
                 `transition-colors duration-300 
                 ${isMenuOpen ? "fixed top-16 inset-0 z-50 bg-black flex px-5 justify-start pl-5" :
-                "invisible lg:visible lg:flex justify-center" }`}
+                "hidden lg:visible lg:flex justify-center" }`}
             >
             <ul className={
                 `transition-opacity ease-in-out duration-900 
-                ${isMenuOpen ? "w-full opacity-100 flex-col space-y-30 mt-10 text-xl" :
-                "lg:opacity-100 opacity-0 flex space-x-20"} `}
+                ${isMenuOpen ? "w-full flex-col space-y-30 mt-10 text-xl" : " flex space-x-20"} `}
             >
             {navLinks.map((link , index) => {
                 const activeLink = link.href === currentPath     
