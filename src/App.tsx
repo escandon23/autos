@@ -1,9 +1,10 @@
 import Navbar from "./components/Navbar/Navbar"
 import Home from "./components/Home/Home"
-import Content from "./components/Content"
 import Services from "./components/Services/Services"
-import Fleet from "./components/Fleet/Fleet"
+import FleetSection from "./components/Fleet/FleetSection"
 import Reasons from "./components/Reasons/Reasons"
+import Promo from "./components/Promo/Promo"
+import Footer from "./components/Footer/Footer"
 
 const App = () => {
 
@@ -12,9 +13,10 @@ const App = () => {
         <Home/>
         <Navbar/>
         <Services/>
-        <Fleet/>
+        <FleetSection/>
         <Reasons/>
-        <Content/>       
+        <Promo/>
+        <Footer/>
       </div>
   )
 }
