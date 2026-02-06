@@ -12,14 +12,13 @@ const App = () => {
       <div>
         <div id="/#" >
           <Home/>
-        </div>
-        
-        
+        </div>        
         <Navbar/>
-        <div id="blogs" className="scroll-mt-15">        <Services/>
-</div>
+        <div id="blogs" className="scroll-mt-15">   
+          <Services/>
+        </div>
         <div id="vehicles" className="scroll-mt-15">
-           <FleetSection/>
+          <FleetSection/>
         </div>
         <Reasons/>
         <Promo/>

@@ -16,7 +16,7 @@ const FleetHeader : React.FC<FleetHeaderProps> = ({activeTab , setActiveTab}) =>
         <div className="flex flex-col   gap-5 ">
             <div className="flex flex-col gap-5 items-center">
                 <h1 className="text-lg lg:text-4xl font-bold">Our Fleet</h1>
-                <p className="tetxt-sm lg:text-lg">Explore our premium selection of luxury sedans, 
+                <p className="text-gray-500 text-center">Explore our premium selection of luxury sedans, 
                     executive vans, and high-end SUVs designed to deliver comfort, safety, 
                     and style for every journey.
                 </p>

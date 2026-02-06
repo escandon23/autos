@@ -36,7 +36,7 @@ const Reasons = () => {
         <div className="flex flex-col  p-5 gap-5">
             <div className="flex flex-col gap-5 text-center">
                 <h1 className="text-lg sm:text-2xl font-bold">Why Choose Us</h1>
-                <p className="text-sm md:text-lg">At AutoHire we pride ourselves in delivering extensive services to fulfil all of your needs with first rate customer care</p>
+                <p className="text-gray-500">At AutoHyre we pride ourselves in delivering extensive services to fulfil all of your needs with first rate customer care</p>
             </div>
             <div className="flex md:h-[50vh] items-center">
                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">

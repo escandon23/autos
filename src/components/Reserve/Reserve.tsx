@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import Distance from './Distance';
-import Hourly from './Hourly';
-import FlatRate from './FlatRate';
+import Distance from './ReserveDistance';
+import Hourly from './ReserveHourly';
+import FlatRate from './ReserveFlatRate';
 import React from "react"
 
-const HomeReserve = () => {
+const Reserve = () => {
 
     const [activeTab , setActiveTab] = useState<string>("Distance")
 
@@ -15,7 +15,7 @@ const HomeReserve = () => {
 
 
     return (
-        <div className="w-full flex items-center md:justify-end md:pr-10  ">
+        <div className="w-full flex items-center md:justify-end pl-5 md:pr-10 flex-2 ">
             <div className="flex flex-col gap-5  w-max h-max rounded-2xl bg-white p-3 md:p-7 " >
                 <div className="flex space-x-5 lg:justify-between">
                     <button 
@@ -50,4 +50,4 @@ const HomeReserve = () => {
 }
 
 
-export default HomeReserve
+export default Reserve

@@ -12,7 +12,7 @@ const NavUtility : React.FC<NavUtilityProps> = ({isMenuOpen,toggleMenu}  ) => {
 
     return(
         <>
-            <div className="flex gap-15 px-10">
+            <div className="flex gap-10 md:gap-15 md:px-10">
                 <LanguageSelector/>
                 <MenuButton isMenuOpen = {isMenuOpen} toggleMenu = {toggleMenu}/>
             </div>

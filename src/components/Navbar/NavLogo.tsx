@@ -9,12 +9,12 @@ interface LogoType {
 const NavLogo = () => {
 
     const logo : LogoType = {
-        image : "AUTOHIRE",
+        image : "AUTOHYRE",
         href : "/home",
     }
 
     return (
-        <span className="font-bold text-2xl uppercase flex-shrink-0"><a href={logo.href}>{logo.image}</a></span>
+        <span className="text-xl md:text-3xl uppercase font-bold  tracking-widest flex-shrink-0"><a href={logo.href}>{logo.image}</a></span>
     )
 
 }

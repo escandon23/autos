@@ -17,7 +17,7 @@ const Service : React.FC<PropsType> = ({ title, description, image }) => {
                 ></div>
                     <div className="flex flex-col gap-4 items-start justify-center">
                         <h3 className="text-2xl font-bold">{title}</h3>
-                        <p className="text-lg text-gray-500 ">{description}</p>
+                        <p className="text-sm md:text-md text-gray-500 ">{description}</p>
                         <button className="bg-black text-white hover:bg-gray-800 transition-colors 
                         rounded-md font-bold py-3 px-8">Read More </button>
 

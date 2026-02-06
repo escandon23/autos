@@ -6,11 +6,12 @@ const Home = () => {
         <>
             <div className="
             relative flex flex-col  bg-[url('public/HomePageCar.jpg')] bg-contain bg-cover  
-            bg-center bg-no-repeat h-screen">
+            bg-center bg-no-repeat h-screen gap-10">
                 <HomeContent/>
-                <HomeReserve/>
-
-            </div>
+                <div className="hidden md:block md:flex-3">
+                    <HomeReserve/>
+                </div>
+             </div>
         </>
     )
 

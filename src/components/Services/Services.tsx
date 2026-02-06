@@ -34,7 +34,7 @@ const Services = () => {
         <div>
             <div className="flex flex-col items-center gap-2 pt-5">
                 <h1 className="text-3xl md:text-4xl font-bold">Services</h1>
-                <p className="text-sm md:text-xl text-gray-500 text-center">We invite you to try our services , and we personally guarantee that you will be completely satisfied</p>
+                <p className="text-gray-500 text-center">We invite you to try our services , and we personally guarantee that you will be completely satisfied</p>
             </div>
             <div className="grid gap-10 grid-cols-1 md:grid-cols-2 p-5 md:p-10">
                  {servicesData.map((data , index ) => (

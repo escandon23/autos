@@ -17,7 +17,7 @@ const LanguageSelector = () => {
     }
     return (
         <div>
-             <button className='flex items-center gap-1'>{currentLanguage.flagIcon} {currentLanguage.code}</button>
+             <button className='flex items-center text-sm md:text-lg  gap-1'>{currentLanguage.flagIcon} {currentLanguage.code}</button>
         </div>
     )
 }

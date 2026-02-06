@@ -26,13 +26,14 @@ const Navbar = () => {
 
     const location = useLocation()
     const currentPath = location.pathname
+    
 
     return(
         <>
         <div className={
             `absolute top-0 transition-all duration-300 ease-in-out shadow-none flex items-center
             justify-between w-screen h-16 py-5 px-5 
-            ${isMenuOpen || isScrolled ? "bg-black fixed top-0 z-50" : ""}
+            ${isMenuOpen || isScrolled ? "bg-black  fixed top-0 z-50" : ""}
              ${isMenuOpen ? "text-white" : isScrolled ? "shadow-lg text-white" : ""}`}>
             <NavLogo/>
             <NavLinks currentPath = {currentPath} />
