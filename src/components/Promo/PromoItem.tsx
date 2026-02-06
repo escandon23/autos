@@ -3,7 +3,7 @@ const PromoItem = () => {
         <div className="lg:grid  lg:grid-cols-2 lg:relative lg:h-[70vh] mt-10">
             <div className="flex flex-col lg:grid-rows-3 gap-10 ">
                 <h1 className="font-bold text-4xl md:text-6xl md:tracking-widest mb-10 lg:mb-20">Mercedes V Class</h1>
-                <img className="lg:absolute lg:w-1/2   lg:right-0 lg:top-0" src="src/public/cars/mercedes-v-class.png" alt="" />
+                <img className="lg:absolute lg:w-1/2   lg:right-0 lg:top-0" src="/public/cars/mercedes-v-class.png" alt="" />
                 <div className="grid grid-cols-2 gap-10 lg:gap-0">
                     <ul className="list-none space-y-3">
                         <li className="text-sm md:text-lg"> Seating for up to 8 passengers</li>
