@@ -1,8 +1,9 @@
-import { Link } from "react-router"
+import { HashLink } from "react-router-hash-link"
 
 interface NavLinksProp {
     currentPath : string,
     isMenuOpen? : boolean,
+    toggleMenu? : () => void
 }
 
 interface NavLinksType {
@@ -11,13 +12,13 @@ interface NavLinksType {
 }
 
 
-const NavLinks : React.FC<NavLinksProp>  = ({currentPath , isMenuOpen}) => {
+const NavLinks : React.FC<NavLinksProp>  = ({currentPath , isMenuOpen , toggleMenu}) => { 
 
     const navLinks : NavLinksType[] = [
-        {name : "Home" , href : "/"},
-        {name : "Vehicles" , href : "/vehicles"},
-        {name : "Blogs" , href : "/blogs"},
-        {name : "Contacts" , href : "/contacts"}
+        {name : "Home" , href : "/#"},
+        {name : "Services" , href : "/#blogs"},
+        {name : "Vehicles" , href : "/#vehicles"},
+        {name : "Contacts" , href : "/#contacts"}
 
     ]
  
@@ -42,7 +43,7 @@ const NavLinks : React.FC<NavLinksProp>  = ({currentPath , isMenuOpen}) => {
                         activeLink ? "font-bold text-gray-400" : ""
                         }`}
                     >
-                <Link to={link.href}>{link.name}</Link></li>
+                <HashLink to={link.href} onClick={toggleMenu}>{link.name}</HashLink></li>
 
                 })}
             </ul>

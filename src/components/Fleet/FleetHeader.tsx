@@ -13,16 +13,16 @@ const FleetHeader : React.FC<FleetHeaderProps> = ({activeTab , setActiveTab}) =>
  
 
     return (
-        <div className="flex flex-col items-center gap-5 p-5">
-            <div className="flex gap-5 items-center">
-                <h1 className="text-4xl font-bold">Our Fleet</h1>
-                <p className="text-lg">Explore our premium selection of luxury sedans, 
+        <div className="flex flex-col   gap-5 ">
+            <div className="flex flex-col gap-5 items-center">
+                <h1 className="text-lg lg:text-4xl font-bold">Our Fleet</h1>
+                <p className="tetxt-sm lg:text-lg">Explore our premium selection of luxury sedans, 
                     executive vans, and high-end SUVs designed to deliver comfort, safety, 
                     and style for every journey.
                 </p>
             </div>
             
-            <div className="flex gap-10">   
+            <div className="flex justify-between md:justify-center md:gap-10 ">   
                 {categories.map((cat , index)  => (
                     <button onClick={() => setActiveTab(cat)} 
                     className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors 

@@ -1,5 +1,13 @@
 import type React from "react"
 import { useEffect, useState } from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation } from "swiper/modules"
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
+
+import "swiper/css"
+import "swiper/css/navigation"
+
 import FleetData from "./FleetData"
 import FleetItem from "./FleetItem"
 
@@ -7,97 +15,55 @@ interface FilteredFleetProps {
   activeTab: string
 }
 
-const CARD_WIDTH = 340
-const GAP = 24 // same as your gap-6 in Tailwind (6 * 4 = 24px)
-
 const FilteredFleet: React.FC<FilteredFleetProps> = ({ activeTab }) => {
-  const [index, setIndex] = useState(0)
-  const [cardsPerView, setCardsPerView] = useState(1)
+  const [filteredItems, setFilteredItems] = useState(FleetData)
 
-  const items =
-    activeTab === "All"
-      ? FleetData
-      : FleetData.filter(item => item.category === activeTab)
-
-  // reset index when tab changes
   useEffect(() => {
-    setIndex(0)
+    if (activeTab === "All") {
+      setFilteredItems(FleetData)
+    } else {
+      setFilteredItems(
+        FleetData.filter(item => item.category === activeTab)
+      )
+    }
   }, [activeTab])
 
-  // update cards per view based on screen size
-  useEffect(() => {
-    const updateCardsPerView = () => {
-      if (window.innerWidth >= 1024) setCardsPerView(3)
-      else if (window.innerWidth >= 640) setCardsPerView(2)
-      else setCardsPerView(1)
-    }
-
-    updateCardsPerView()
-    window.addEventListener("resize", updateCardsPerView)
-    return () => window.removeEventListener("resize", updateCardsPerView)
-  }, [])
-
-  // max index to prevent overscroll
-  const maxIndex = Math.max(items.length - cardsPerView, 0)
-
   return (
-    <div className="relative mx-auto mt-8">
-      {/* VIEWPORT */}
-      <div
-        className="
-          overflow-hidden mx-auto
-          w-[340px] sm:w-[700px] lg:w-[1040px]
-        "
-      >
-        {/* TRACK */}
-        <div
-          className="flex gap-6 transition-transform duration-500 ease-out"
-          style={{
-            transform: `translateX(-${index * (CARD_WIDTH + GAP)}px)`,
-          }}
-        >
-          {items.map(item => (
-            <div
-              key={item.id}
-              className="min-w-[340px] max-w-[340px] flex-shrink-0"
-            >
-              <FleetItem
-                image={item.image}
-                name={item.name}
-                luggage={item.luggage}
-                passengers={item.passengers}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* LEFT */}
-      <button
-        onClick={() => setIndex(i => Math.max(i - 1, 0))}
-        disabled={index === 0}
-        className="
-          absolute left-0 top-1/2 -translate-y-1/2
-          bg-white shadow-md rounded-full
-          p-2 disabled:opacity-40
-        "
-        aria-label="Previous"
-      >
-        ‹
+    <div className="relative mt-8 flex items-center  ">
+      <button className="fleet-prev absolute left-0 z-10 h-10 w-10 rounded-full bg-white shadow flex items-center justify-center hover:bg-gray-100">
+        <ArrowBackIosNewIcon fontSize="small" />
       </button>
+      <div className="w-full">
+        <Swiper
+            modules={[Navigation]}
+            spaceBetween={0}
+            navigation={{
+            prevEl: ".fleet-prev",
+            nextEl: ".fleet-next",
+          }}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="w-full "
+          >
+            {filteredItems.map(item => (
+              <SwiperSlide key={item.id} className="flex justify-between  ">
+                  <FleetItem
+                    image={item.image}
+                    name={item.name}
+                    luggage={item.luggage}
+                    passengers={item.passengers}
+                  />
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-      {/* RIGHT */}
-      <button
-        onClick={() => setIndex(i => Math.min(i + 1, maxIndex))}
-        disabled={index === maxIndex}
-        className="
-          absolute right-0 top-1/2 -translate-y-1/2
-          bg-white shadow-md rounded-full
-          p-2 disabled:opacity-40
-        "
-        aria-label="Next"
-      >
-        ›
+
+      </div>
+      <button className="fleet-next absolute right-0 z-10 h-10 w-10 rounded-full bg-white shadow flex items-center justify-center hover:bg-gray-100">
+        <ArrowForwardIosIcon fontSize="small" />
       </button>
     </div>
   )

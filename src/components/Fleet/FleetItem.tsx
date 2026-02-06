@@ -2,6 +2,7 @@ import { Card, CardMedia, CardContent, Typography, Stack } from "@mui/material"
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline"
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline"
 
+
 interface FleetItemType {
   name: string
   image: string
@@ -13,27 +14,28 @@ const FleetItem: React.FC<FleetItemType> = ({ name, image, luggage, passengers }
   return (
     <Card
       sx={{
-        minWidth: 320,
-        borderRadius: 3,
-        boxShadow: 3,
         display: "flex",
         flexDirection: "column",
-        height: "100%", // makes the card stretch inside carousel
+        maxWidth: 340,
+        height: 340,
+        boxShadow: "none",
+         margin: "0 auto",
+   
       }}
     >
-      {/* Aspect ratio wrapper */}
-      <div style={{ position: "relative", width: "100%", paddingTop: "56.25%" }}>
+      <div style={{ position: "relative", width: "100%" , height : "80%"}}>
         <CardMedia
           component="img"
           image={image}
           alt={name}
           sx={{
             position: "absolute",
+             inset: 0,
+              width: "100%",
+              height: "100%",
             top: 0,
             left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
+            objectFit: "contain",
           }}
         />
       </div>

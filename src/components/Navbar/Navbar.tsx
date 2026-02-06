@@ -41,7 +41,7 @@ const Navbar = () => {
 
         <div>
         <div className="lg:hidden">
-                <NavLinks currentPath = {currentPath} isMenuOpen={isMenuOpen} />
+                <NavLinks currentPath = {currentPath} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>
         </div>
 
         </div>

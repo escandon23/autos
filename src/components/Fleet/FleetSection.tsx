@@ -8,7 +8,7 @@ const FleetSection = () => {
     const [activeTab , setActiveTab] = useState<string>("All")
 
     return (
-        <div>
+        <div className="p-5">
 
         <FleetHeader activeTab={activeTab} setActiveTab={setActiveTab}/>
         <FilteredFleet activeTab={activeTab} />

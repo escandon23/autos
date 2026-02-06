@@ -21,8 +21,8 @@ const Footer = () => {
             
             <div>
                 <h1 className="mb-4 font-semibold">Top Cities</h1>
-                <ul className="list-none text-sm space-y-3">
-                    <li className="text-sm">New York</li>
+                <ul className="list-none text-sm md:text-md space-y-3">
+                    <li>New York</li>
                     <li>London</li>
                     <li>Berlin</li>
                     <li>Los Angeles</li>

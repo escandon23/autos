@@ -10,13 +10,23 @@ const App = () => {
 
   return (
       <div>
-        <Home/>
+        <div id="/#" >
+          <Home/>
+        </div>
+        
+        
         <Navbar/>
-        <Services/>
-        <FleetSection/>
+        <div id="blogs" className="scroll-mt-15">        <Services/>
+</div>
+        <div id="vehicles" className="scroll-mt-15">
+           <FleetSection/>
+        </div>
         <Reasons/>
         <Promo/>
-        <Footer/>
+        <div id="contacts">
+          <Footer/>
+        </div>
+
       </div>
   )
 }

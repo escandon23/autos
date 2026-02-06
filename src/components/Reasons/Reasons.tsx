@@ -33,12 +33,22 @@ const ReasonsData : ReasonsDataType[] = [
 
 const Reasons = () => {
     return (
-        <div className="grid grid-cols-2 lg:grid-cols-4">
-            {ReasonsData.map((reason , index) =>(
-                <Reason key={index} image={reason.image} title={reason.title} description={reason.description}/>
-            ))}
+        <div className="flex flex-col  p-5 gap-5">
+            <div className="flex flex-col gap-5 text-center">
+                <h1 className="text-lg sm:text-2xl font-bold">Why Choose Us</h1>
+                <p className="text-sm md:text-lg">At AutoHire we pride ourselves in delivering extensive services to fulfil all of your needs with first rate customer care</p>
+            </div>
+            <div className="flex md:h-[50vh] items-center">
+                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+                {ReasonsData.map((reason , index) =>(
+                    <Reason key={index} image={reason.image} title={reason.title} description={reason.description}/>
+                ))}
+            </div>
 
+            </div>
+           
         </div>
+       
     )
 
 }
