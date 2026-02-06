@@ -7,22 +7,22 @@ interface ReasonsDataType {
 }
 const ReasonsData : ReasonsDataType[] = [
     {
-        image : "src/public/CalendarIcon.png",
+        image : "/CalendarIcon.png",
         title : "Easy Online Booking",
         description : "Book your ride in minutes using our simple and secure online reservation system—available anytime, anywhere."
     },
     {
-        image : "src/public/DriverIcon.png",
+        image : "/DriverIcon.png",
         title : "Professional Chauffeurs",
         description : "Our experienced, licensed chauffeurs are trained to provide safe, discreet, and courteous service on every trip."
     },
     {
-        image : "src/public/CarsIcon.png",
+        image : "/CarsIcon.png",
         title : "Wide Range of Vehicles",
         description : "Choose from a diverse fleet of luxury sedans, executive vans, and premium SUVs to match your travel needs."
     },
     {
-        image : "src/public/CreditCard.png",
+        image : "/CreditCard.png",
         title : "Secure Online Payment",
         description : "Pay safely using trusted online payment methods with encrypted transactions for your peace of mind."
     }
