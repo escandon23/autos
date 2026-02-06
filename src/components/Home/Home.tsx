@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <>
             <div className="
-            relative flex flex-col  bg-[url('public/HomePageCar.jpg')] bg-contain bg-cover  
+            relative flex flex-col  bg-[url('/HomePageCar.jpg')] bg-contain bg-cover  
             bg-center bg-no-repeat h-screen gap-10">
                 <HomeContent/>
                 <div className="hidden md:block md:flex-3">
