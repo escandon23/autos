@@ -4,23 +4,23 @@ const servicesData = [
     {
         title: "Airport transfers",
         description: "With additional wait time and flight tracking in case of delays, our service is optimized to make every airport transfer a breeze.",
-        image: "public/AirportCar.jpg"
+        image: "/AirportCar.jpg"
     },
   
     {
         title: "Wedding events",
         description: "Our friendly, and attentive service combined with thorough attention to detail ensure you can truly relax and enjoy your special day.",
-        image: "public/WeddingCar.jpg"
+        image: "/WeddingCar.jpg"
     },
     {
         title: "Business Meeting",
         description: "Focus on your meeting with your partners, forget about the road and the car, which will distract your thoughts.",
-        image: "public/BusinessCar.jpg"
+        image: "/BusinessCar.jpg"
     },
       {
         title: "Intercity trips",
         description: "Your stressfree solution for traveling between cities with chauffeurs all over the world.",
-        image: "public/InterCityCar.jpg"
+        image: "/InterCityCar.jpg"
     }
 ]
 
