@@ -1,4 +1,3 @@
-import Reserve from "../Reserve/Reserve"
 import PromoItem from "./PromoItem"
 const Promo = () => {
     return (
@@ -9,9 +8,7 @@ const Promo = () => {
             </div>
           
             <PromoItem/>
-            <div className="block md:hidden mt-10">
-                <Reserve/>
-            </div>
+        
 
         </div>
     )
