@@ -7,7 +7,7 @@ const FleetData = [
     category: "Luxury",
     passengers: "2–3",
     luggage: "2–3 bags",
-    image: "src/public/cars/mercedes-s-class.png",
+    image: "/cars/mercedes-s-class.png",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const FleetData = [
     category: "Business",
     passengers: "5–7",
     luggage: "4–6 bags",
-    image: "src/public/cars/mercedes-v-class.png",
+    image: "/cars/mercedes-v-class.png",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const FleetData = [
     category: "Luxury",
     passengers: "2–3",
     luggage: "2–3 bags",
-    image: "src/public/cars/audi-a8.png",
+    image: "/cars/audi-a8.png",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const FleetData = [
     category: "Luxury",
     passengers: "2–3",
     luggage: "2 bags",
-    image: "src/public/cars/rolls-phantom.png",
+    image: "/cars/rolls-phantom.png",
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ const FleetData = [
     category: "Crossover",
     passengers: "5",
     luggage: "4 bags",
-    image: "src/public/cars/rangerover-vogue.png",
+    image: "/cars/rangerover-vogue.png",
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ const FleetData = [
     category: "Crossover",
     passengers: "5",
     luggage: "3–4 bags",
-    image: "src/public/cars/bmw-x5.png",
+    image: "/cars/bmw-x5.png",
   },
   {
     id: 7,
@@ -55,7 +55,7 @@ const FleetData = [
     category: "Crossover",
     passengers: "7",
     luggage: "5–6 bags",
-    image: "src/public/cars/toyota-land-cruiser-prado.png",
+    image: "/cars/toyota-land-cruiser-prado.png",
   },
   {
     id: 8,
@@ -63,7 +63,7 @@ const FleetData = [
     category: "Business",
     passengers: "10–12",
     luggage: "6–8 bags",
-    image: "src/public/cars/toyota-hiace.png",
+    image: "/cars/toyota-hiace.png",
   },
   {
     id: 9,
@@ -71,7 +71,7 @@ const FleetData = [
     category: "Business",
     passengers: "8–9",
     luggage: "5–6 bags",
-    image: "src/public/cars/volkswagen-caravelle.png",
+    image: "/cars/volkswagen-caravelle.png",
   },
 ];
 

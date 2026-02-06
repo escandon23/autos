@@ -17,7 +17,7 @@ const Footer = () => {
                 <p className="mb-5 text-sm md:text-md lg:text-lg ">Subscribe to newsletter</p>
                 <div className="flex w-full lg:w-[80%] ">
                     <input className="bg-gray-300 text-sm md:text-lg text-black px-2 py-2 lg:py-4  w-full  rounded-l-lg focus:outline-none " type="email" />
-                    <div className="flex p-2 bg-white rounded-r-lg  max-w-[40px]"><img src="src/public/icons/RightArrow.png" alt="" /></div>
+                    <div className="flex p-2 bg-white rounded-r-lg  max-w-[40px]"><img src="/icons/RightArrow.png" alt="" /></div>
                 </div>
              
             </div>
@@ -67,11 +67,11 @@ const Footer = () => {
                 </div>
                 <div>
                     <ul className="flex  space-x-10  md:space-x-5">
-                        <li className="w-[20px] md:w-[30px] cursor-pointer"><img src="src/public/socials/youtube.png" alt="" /></li>
-                        <li className="w-[20px] md:w-[30px] cursor-pointer"><img src="src/public/socials/facebook.png" alt="" /></li>
-                        <li className="w-[20px] md:w-[30px] cursor-pointer"><img src="src/public/socials/twitter.png" alt="" /></li>
-                        <li className="w-[20px] md:w-[30px] cursor-pointer"><img src="src/public/socials/instagram.png" alt="" /></li>
-                        <li className="w-[20px] md:w-[30px] cursor-pointer"><img src="src/public/socials/linkedin.png" alt="" /></li>
+                        <li className="w-[20px] md:w-[30px] cursor-pointer"><img src="/socials/youtube.png" alt="" /></li>
+                        <li className="w-[20px] md:w-[30px] cursor-pointer"><img src="/socials/facebook.png" alt="" /></li>
+                        <li className="w-[20px] md:w-[30px] cursor-pointer"><img src="/socials/twitter.png" alt="" /></li>
+                        <li className="w-[20px] md:w-[30px] cursor-pointer"><img src="/socials/instagram.png" alt="" /></li>
+                        <li className="w-[20px] md:w-[30px] cursor-pointer"><img src="/socials/linkedin.png" alt="" /></li>
 
                     </ul>
                 </div>
