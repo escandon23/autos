@@ -1,12 +1,11 @@
 import type React from "react"
 import { useEffect, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation } from "swiper/modules"
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
+import { Pagination } from "swiper/modules"
+
 
 import "swiper/css"
-import "swiper/css/navigation"
+import "swiper/css/pagination";
 
 import FleetData from "./FleetData"
 import FleetItem from "./FleetItem"
@@ -30,23 +29,18 @@ const FilteredFleet: React.FC<FilteredFleetProps> = ({ activeTab }) => {
 
   return (
     <div className="relative mt-8 flex items-center  ">
-      <button className="fleet-prev absolute left-0 z-10 h-10 w-10 rounded-full bg-white shadow flex items-center justify-center hover:bg-gray-100">
-        <ArrowBackIosNewIcon fontSize="small" />
-      </button>
+    
       <div className="w-full">
         <Swiper
-            modules={[Navigation]}
+            modules={[Pagination]}
+              pagination={{ clickable: true }}
             spaceBetween={0}
-            navigation={{
-            prevEl: ".fleet-prev",
-            nextEl: ".fleet-next",
-          }}
             slidesPerView={1}
             breakpoints={{
               640: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            className="w-full "
+            className="w-full h-[50vh] md:h-[40vh] lg:h-[50vh] "
           >
             {filteredItems.map(item => (
               <SwiperSlide key={item.id} className="flex justify-between  ">
@@ -62,9 +56,7 @@ const FilteredFleet: React.FC<FilteredFleetProps> = ({ activeTab }) => {
 
 
       </div>
-      <button className="fleet-next absolute right-0 z-10 h-10 w-10 rounded-full bg-white shadow flex items-center justify-center hover:bg-gray-100">
-        <ArrowForwardIosIcon fontSize="small" />
-      </button>
+    
     </div>
   )
 }
